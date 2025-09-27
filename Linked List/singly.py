@@ -94,6 +94,20 @@ class SLL:
             temp.next = target.next 
             del target
 
+    def reverse(self):
+        if self.isEmpty():
+            print('The Linked List is empty')
+        else:
+            prev = None
+            current = self.head
+            nextnode = self.head
+            while nextnode != None:
+                nextnode = nextnode.next
+                current.next = prev
+                prev = current
+                current = nextnode
+            self.head = prev
+
     def display(self):
         temp = self.head
         while temp:
@@ -122,4 +136,10 @@ sll.insertAt(1,110)
 sll.insertAt(2,111)
 sll.insertAt(4,112)
 sll.insertAt(3,113)
+
+# Checking Reverse method
+print('Before reversing:')
+sll.display()
+print('\nAfter reversing:')
+sll.reverse()
 sll.display()
