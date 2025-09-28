@@ -106,14 +106,13 @@ class DLL:
         elif pos == length:
             self.deleteEnd()
         else:
-            pos = pos - 1
-            prev = self.head
+            current = self.head
             i = 1
             while i < pos:
                 prev = prev.next 
                 i += 1
-            target = prev.next
-            next_node = target.next 
+            prev = current.prev
+            next_node = current.next 
             prev.next = next_node
             next_node.prev = prev
             del target
