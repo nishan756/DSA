@@ -115,7 +115,7 @@ class DLL:
             next_node = current.next 
             prev.next = next_node
             next_node.prev = prev
-            del target
+            del current
 
     def ForDisplay(self):
         node = self.head
