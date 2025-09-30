@@ -24,6 +24,12 @@ class Stack:
             self.stack[self.top] = None
             self.top -= 1
     
+    def peek(self):
+        if self.isEmpty():
+            return "Stack is empty"
+        else:
+            return self.stack[self.top]
+        
     def display(self):
         if self.isEmpty():
             print('Stack is empty')
