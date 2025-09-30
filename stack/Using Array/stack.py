@@ -34,7 +34,7 @@ class Stack:
         if self.isEmpty():
             print('Stack is empty')
         else:
-            print('Stack:',[(i) for i in range(self.top , -1 , -1)])
+            print('Stack:',self.stack[0:self.top+1])
 
 s = Stack(20)
 
