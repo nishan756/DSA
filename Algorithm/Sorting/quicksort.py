@@ -11,8 +11,8 @@ def Partition(array:List , low , high):
         if i < j:
             array[i] , array[j] = array[j] , array[i]
             
-    array[low] , array[j] = array[j] , array[low]
-    return j
+        array[low] , array[j] = array[j] , array[low]
+        return j
 
 def QuickSort(array:List , low , high):
     if low < high:
